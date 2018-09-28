@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+  
+
+.intro{
+  top: 50%;
+  left: 50%;
+  font-size: 300%;
+  text-align: center;
+  margin: auto;
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  animation: intro 6s ease-out 1s;
+  opacity: 0;
+  @keyframes intro{
+    0% {opacity: 0;
+    }
+    20%{
+      opacity: 1;      
+    }
+    90%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  
+  }
+}
+
+.image{
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 48%;
+  left: 38%;
+  z-index: 1;
+  animation: image 10s ease-out 10s;
+  opacity: 0;
+
+  @keyframes image {
+    0%{
+      width: 18em;
+      opacity: 1;
+      transform: scale(2);
+    }
+    50%{
+      width: 18em;
+      opacity: 1;
+    }
+
+    100%{
+      width: 18em;
+      opacity: 0;
+      transform: scale(0.1)
+
+    }
+    
+  }
+
+}
+  
+.histoire{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  text-align: justify;
+  z-index: 1;
+  transform: perspective(700px);
+  animation: histoire 60s linear 10s 1 normal;
+  transform-origin: center bottom;
+  opacity: 0;
+  color: yellow;
+
+  h2{
+    text-align: center;
+
+  }
+  
+
+}
+
+@keyframes histoire{
+  0%{
+    transform:
+    translate(-50%, -50%)
+    perspective(500px)
+    rotateX(25deg)
+    scale3d(3, 3, 3)
+    translate3d(0px, 720px, 0px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform:
+    translate(-50%, -50%)
+    perspective(300px)
+    rotateX(25deg)
+    scale3d(3, 3, 3)
+    translate3d(0px, -500px, 0px);
+  }
+}
+
+   
+
